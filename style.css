@@ -1,0 +1,109 @@
+body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    background-color: #333;
+    color: #222;
+    margin: 0;
+    width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+section div {
+    width: 100%;
+    padding: 85px 10vw;
+    margin: auto;
+    position: relative;
+    background-color: #fff;
+    transform-origin: top left;
+    transition: transform 1s;
+    z-index: 1;
+}
+
+section div h1 {
+    font-size: 32px;
+}
+
+section div p {
+    font-size: 16px;
+}
+
+section div img {
+    width: 90%;
+}
+
+.circle-container {
+    position: fixed;
+    top: -90px;
+    left: -90px;
+    z-index: 1;
+}
+
+.circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-color: #ff7979;
+    transition: transform 0.4s;
+}
+
+.circle i:first-child{
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 25px;
+}
+.circle i:last-child{
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    right: 55%;
+    padding: 25px;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    bottom: 40px;
+    color: #fff;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li:first-child {
+    transform: translateX(-176px);
+}
+nav ul li:nth-child(2) {
+    transform: translateX(-176px);
+}
+nav ul li:nth-child(3) {
+    transform: translateX(-176px);
+}
+nav ul li{
+    list-style: none;
+    margin: 35px;
+    transition: transform 0.5s;
+}
+
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a i {
+    margin-right: 10px;
+}

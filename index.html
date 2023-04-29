@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/84d289294d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    background-color: #333;
+    color: #222;
+    margin: 0;
+    width: 100vw;
+    max-height: 100vh;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+}
+
+section div {
+    width: 100%;
+    padding: 85px 10vw;
+    margin: auto;
+    position: relative;
+    background-color: #fff;
+    transform-origin: top left;
+    transition: transform 1s;
+    z-index: 1;
+}
+
+section div h1 {
+    font-size: 32px;
+}
+
+section div p {
+    font-size: 16px;
+}
+
+section div img {
+    width: 90%;
+}
+
+.circle-container {
+    position: fixed;
+    top: -90px;
+    left: -90px;
+    z-index: 1;
+}
+
+.circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    background-color: #ff7979;
+    transition: transform 0.4s;
+}
+
+.circle i:first-child{
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 25px;
+}
+.circle i:last-child{
+    color: #fff;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    right: 55%;
+    padding: 25px;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    bottom: 40px;
+    color: #fff;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li:first-child {
+    transform: translateX(-176px);
+}
+nav ul li:nth-child(2) {
+    transform: translateX(-176px);
+}
+nav ul li:nth-child(3) {
+    transform: translateX(-176px);
+}
+nav ul li{
+    list-style: none;
+    margin: 35px;
+    transition: transform 0.5s;
+}
+
+
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a i {
+    margin-right: 10px;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="divrot">
+            <h1>Titulo</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi autem unde quibusdam fuga iste minus dolore quas repellendus, necessitatibus, voluptatem optio quod totam enim, veritatis culpa possimus aliquid assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, fugit! Nisi reprehenderit iusto maxime quam adipisci aperiam nostrum itaque pariatur! Assumenda ipsam voluptatem repellat earum officia quibusdam iusto. Ut, veniam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi autem unde quibusdam fuga iste minus dolore quas repellendus, necessitatibus, voluptatem optio quod totam enim, veritatis culpa possimus aliquid assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, fugit! Nisi reprehenderit iusto maxime quam adipisci aperiam nostrum itaque pariatur! Assumenda ipsam voluptatem repellat earum officia quibusdam iusto. Ut, veniam!</p>
+            <img src="https://images.unsplash.com/photo-1507146426996-ef05306b995a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione quasi autem unde quibusdam fuga iste minus dolore quas repellendus, necessitatibus, voluptatem optio quod totam enim, veritatis culpa possimus aliquid assumenda! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, fugit! Nisi reprehenderit iusto maxime quam adipisci aperiam nostrum itaque pariatur! Assumenda ipsam voluptatem repellat earum officia quibusdam iusto. Ut, veniam!</p>
+        </div>
+    </section>
+
+
+    <nav>  
+        <ul>
+            <li class="li1"><a href=""><i class="fa-solid fa-house-chimney"></i>HOME</li></a>
+            <li class="li2"><a href=""><i class="fa-solid fa-user"></i>ABOUT</li></a>
+            <li class="li3"><a href=""><i class="fa-solid fa-envelope"></i>CONTACT</li></a>
+        </ul>
+    </nav>
+    
+    <div class="circle-container">
+        <div class="circle">
+            <i class="fa-solid fa-bars rayas"></i>
+            <i class="fa-solid fa-xmark cruz"></i>
+        </div>
+    </div>
+    <script>
+        const divRot = document.querySelector(".divrot");
+const li1 = document.querySelector(".li1");
+const li2 = document.querySelector(".li2");
+const li3 = document.querySelector(".li3");
+const circulo = document.querySelector(".circle");
+const rayas = document.querySelector(".rayas");
+const cruz = document.querySelector(".cruz");
+
+rayas.addEventListener("click",()=>{
+    divRot.style.transform = "rotate(-20deg)";
+    circulo.style.transform = "rotate(-90deg)";
+    setTimeout(()=> li1.style.transform = "translateX(0px)", 300) 
+    setTimeout(()=> li2.style.transform = "translateX(20px)", 350) 
+    setTimeout(()=> li3.style.transform = "translateX(40px)", 400) 
+})
+
+cruz.addEventListener("click",()=>{
+    divRot.style.transform = "rotate(0deg)";
+    circulo.style.transform = "rotate(0deg)";
+    setTimeout(()=> li1.style.transform = "translateX(-176px)", 64) 
+    setTimeout(()=> li2.style.transform = "translateX(-176px)", 34) 
+    setTimeout(()=> li3.style.transform = "translateX(-176px)", 0)
+})
+    </script>
+</body>
+</html>
